@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+  <div class="cart-container">
+    <h1>Shopping Cart</h1>
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="product-info">
+            <img src="/Users/goutams/Documents/Design Project/cart-page/product-1.png" alt="iphone">
+            <div>
+              <span class="product-name">iPhone SE 128GB (PRODUCT) Black</span>
+              <span class="price">₹45000.00</span>
+            </div>
+          </td>
+          <td class="quantity-buttons">
+            <button class="decrease-button" onclick="updateQuantity(this.parentNode.parentNode, 'decrease')">-</button>
+            <span>1</span>
+            <button class="increase-button" onclick="updateQuantity(this.parentNode.parentNode, 'increase')">+</button>
+          </td>
+          <td>₹45000.00</td>
+        </tr>
+        <tr>
+          <td class="product-info">
+            <img src="/Users/goutams/Documents/Design Project/cart-page/product-2.png" alt="Back Case">
+            <div>
+              <span class="product-name">Back Case for iPhone 12(Black)</span>
+              <span class="price">₹2500.00</span>
+            </div>
+          </td>
+          <td class="quantity-buttons">
+            <button class="decrease-button" onclick="updateQuantity(this.parentNode.parentNode, 'decrease')">-</button>
+            <span>1</span>
+            <button class="increase-button" onclick="updateQuantity(this.parentNode.parentNode, 'increase')">+</button>
+          </td>
+          <td>₹2500.00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td >Total</td>
+          <td id="total-price">₹47500.00</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td >Discounted Total</td>
+          <td id="discounted-total">₹47500.00</td> 
+          <!-- added new table data -->
+        </tr>
+      </tfoot>
+    </table>
+    <a class="luck-button" id="openFile" href="#">Try Your Luck</a>
+    <a class="checkout-button" href="#" onclick="alert('We cannot process your request\nPlease try again')">Checkout</a>
+  </div>
+  <script>
+    window.onload = function () {
+      document.getElementById('openFile').addEventListener('click', function () {
+        var clickCount = localStorage.getItem('clickCount') || '';
+        var count = parseInt(clickCount)
+        // Open the HTML file in a new tab only once
+        if(count == 1){
+          this.style.display = 'none'
+          alert('Only Once Per Order')
+        }
+        else if (!this.clicked) {
+          //window.location.href = 'spin.html';
+          window.open('spin.html', '_blank');
+          this.clicked = true;
+        }
+        // Hide the link after the first click
+        this.style.display = 'none';
+      });
+    }
+
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>

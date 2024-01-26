@@ -1,0 +1,172 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #bbc082, #3A6B35);
+}
+
+.cart-container {
+  width: 70%;
+  margin: 20px auto;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom right, #fcf6f6, #e5e5e5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 36px;
+  padding: 40px 0;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  margin: 0;
+  background-color: #03376e;
+  color: #fff;
+  font-family: 'Poppins', sans-serif; /* Updated font */
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); /* Added drop shadow */
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th{
+  padding: 20px;
+  text-align: left;
+  background-color: #0162ca;
+  color: #fff;
+}
+.cart-table td{
+  padding: 30px;
+  text-align: top;
+}
+
+.cart-table tbody tr{
+  transition: transform 0.2s ease-in-out; 
+}
+
+.cart-table tbody tr:hover{
+  transform: scale(1.01); 
+  
+}
+.cart-table tr:hover {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table tbody img {
+  transition: transform 0.2s ease-in-out; /* Hover effect */
+}
+
+.cart-table tbody tr:hover img {
+  transform: scale(1.05); /* Enlarge on hover */
+}
+
+
+
+.cart-table tbody img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.product-info {
+  font-family: 'Verdana', sans-serif;
+  align-items: flex-start;
+  display: flex;
+}
+
+.product-info div {
+  margin-left: 5px;
+  /* Add spacing between image and product details */
+}
+
+.product-info span {
+  display: block;
+  /* Make the span a block element */
+}
+
+.product-info .product-name {
+  color: #444;
+  margin-bottom: 10px;
+  font-size: 16px;
+ 
+}
+
+.product-info .price {
+  color: #333;
+  /* Color for price */
+}
+
+
+
+.quantity-buttons button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  background-color: #0162ca;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+}
+.quantity-buttons button:active {
+  transform: scale(1.5);
+}
+
+.quantity-buttons span {
+  font-size: 16px;
+}
+
+.checkout-button {
+  background-color: #e0b246;
+  color: #070606;
+  padding: 20px 30px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+  text-decoration: none;
+  margin-left: 20%;
+  margin-right: 20%;
+  /* Remove underline from the link */
+}
+
+.checkout-button:hover {
+  background-color: #218838;
+  color: #fff;
+}
+
+.luck-button{
+  color: #215da6;
+  padding: 15px 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+  transition: background-color 0.9s ease;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 40%;
+  margin-right: 40%;
+  text-decoration: none;
+}
+
+.luck-button:hover{
+  color: #e1dddd;
+  background: linear-gradient(135deg, #bbc082, #3A6B35);
+}

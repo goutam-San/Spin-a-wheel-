@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Spin the Wheel</title>
+    <link rel="stylesheet" href="styleWheel.css">
+
+    <!-- Add the following styles for celebration animation -->
+    <style>
+        .celebrate-alert {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 100px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        #message-container {
+            margin-bottom: 10px;
+        }
+
+        .celebrate-alert p {
+            margin: 0;
+        }
+
+        .celebrate-alert button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #e0b246;
+            color: #070606;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .celebrate-alert button:hover {
+            background-color: #218838;
+            color: #fff;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+
+    <div class="wrapper">
+        <div class="container">
+            <canvas id="wheel"></canvas>
+            <button id="spin-btn">SPIN</button>
+        </div>
+        <div id="final-value">
+            Click On The Spin Button To Start
+        </div>
+        <img src="stopperImage.png" alt="stopper">
+    </div>
+
+    <!-- Celebration Alert -->
+    <div id="celebrate-alert" class="celebrate-alert">
+        <div id="message-container"></div>
+        <button id="close-btn">Close</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
+    <script src="spinWheel.js"></script>
+</body>
+
+</html>
